@@ -2,19 +2,17 @@ Tokenizer
 =========
 
 Author      : mevinbabuc@gmail.com
-Description : Sentimental analysis module for machine learning 
-Developers  : ? 
+Description : Tokenizes chunks of text efficiently using a producer comsumer threading architecture and stores the word frequency in a pickled dictionary
 __________________________________________________________________________________
 
-Tokenizer uses python NLTK package to tokenize and filter them for irrelevant data and assigns sentimental value to the
-sentenses .
+Tokenizer helps tokenize big chunks of data and save (pickle) the word frequency in a dictionary for NLP.Its best suitable for sentiment analysis and machine learning
 
-Data Flow Diagram - Tokenizer
-=============================
+Features
+========
 
-mysqldb => tweeets => tokenize => filter => word rating => mysqldb
-
-Data Flow Diagram - Filter
-=============================
-
-remove links => stemming => remove punctuations and irrelevant characters 
+. Tokenize words
+. Removes stop words
+. Removes punctuations and irrelavant charecters like ( !@#$%& )
+. Removes more than 2 repeatition of charecters in a text like heyyyy => heyy , yeaaaahh => yeaahh
+. Removes links,#tags and @username references
+. Removes numbers like 1, 12 but not words like g8 , n8 , m8 etc

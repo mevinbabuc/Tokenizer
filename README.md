@@ -11,6 +11,7 @@ Features
 
 * Tokenize words
 * Removes stop words
+* Stems the word using NLTK Lancaster stemmer i.e playing => play , played => play
 * Removes punctuations and irrelavant charecters like ( !@#$%& )
 * Removes more than 2 repeatition of charecters in a text like heyyyy => heyy , yeaaaahh => yeaahh
 * Removes links,#tags and @username references
